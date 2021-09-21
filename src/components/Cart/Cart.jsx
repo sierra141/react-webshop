@@ -8,9 +8,9 @@ import { CircularProgress } from '@material-ui/core';
 const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart }) => {
 
     const EmptyCart = () => (
-        <div>
-            <h4 className='pt-4 pb-4 text-3xl'>You have no items in cart!</h4>
-            <Link to='/'><button className='bg-blue-600 text-white h-10 px-5 rounded-lg' type="button" >Back to store</button></Link>
+        <div className='flex flex-col items-center justify-center'>
+            <h4 className='pt-4 pb-4 text-3xl ml-3'>No items in cart!</h4>
+            <Link to='/'><button className='bg-blue-600 text-white h-10 px-5 m-5 rounded-lg' type="button" >Back to store</button></Link>
         </div>
     );
 
