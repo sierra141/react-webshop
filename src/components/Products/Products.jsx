@@ -1,6 +1,5 @@
 import React from "react";
-import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import { CircularProgress } from '@material-ui/core';
 
 
 import Product from "./Product/Product";
@@ -8,7 +7,11 @@ import Product from "./Product/Product";
 
 const Products = ({ products, onAddToCart }) => {
 
-    if(!products) return <CircularProgressbar value={50}/>
+    if(!products.length) return (
+    <div className='w-full h-20 flex justify-center items-center'>
+    <CircularProgress />
+    </div>)
+
     return (
         <main>
         <div className='grid grid-cols-3 gap-4'>  
