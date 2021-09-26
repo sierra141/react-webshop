@@ -14,7 +14,7 @@ const Products = ({ products, onAddToCart }) => {
 
     return (
         <main>
-        <div className='grid grid-cols-3 gap-4'>  
+        <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 gap-4'>  
         {products.map((product) => (
             <div className='rounded overflow-hidden shadow-lg' item key={product.id}>     
                     <Product product = {product} onAddToCart={onAddToCart} />

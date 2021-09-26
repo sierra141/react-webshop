@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Review = ({ checkoutToken }) => {
+    console.log(checkoutToken)
     return (
         <div className='flex'>
             <ul className='w-full'> 
@@ -14,7 +15,7 @@ const Review = ({ checkoutToken }) => {
                     </li>                      
                     ))}
                     <li className='text-xl font-semibold mt-2 mb-1'>Total</li>
-                    <p className='font-semibold mb-2'>{checkoutToken.live.subtotal.formatted_with_symbol}</p>
+                    <p className='font-semibold mb-2'>{checkoutToken.live.subtotal.formatted_with_symbol} + {checkoutToken.shipping_methods[0].price.formatted_with_symbol} (Shipping fee) </p>
             </ul>
         </div>
     )
